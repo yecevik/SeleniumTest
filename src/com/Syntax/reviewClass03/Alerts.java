@@ -1,0 +1,33 @@
+package com.Syntax.reviewClass03;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ISelect;
+import org.openqa.selenium.support.ui.Select;
+public class Alerts {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        driver.get("https://demoqa.com/alerts");
+
+
+        WebElement alertButton1 = driver.findElement(By.xpath("//button[@id='alertButton']"));
+       alertButton1.click();
+
+       Alert alert1=driver.switchTo().alert();
+       Thread.sleep(2000);
+       alert1.accept();
+
+        WebElement alertBtn3 = driver.findElement(By.xpath("//button[@id='promtButton']"));
+        alertBtn3.click();
+
+
+        alert1.sendKeys("hokus pokus");
+        alert1.accept();
+
+    }
+}
