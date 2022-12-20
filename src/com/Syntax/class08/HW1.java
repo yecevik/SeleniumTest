@@ -24,8 +24,8 @@ public class HW1 {
         WebElement button = driver.findElement(By.xpath("//button[text()='Remove']"));
         button.click();
 
-        WebDriverWait wait=new WebDriverWait(driver,20);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
+       // WebDriverWait wait=new WebDriverWait(driver,20);
+       // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@id='message']")));
 
         WebElement Message = driver.findElement(By.xpath("//p[@id='message']"));
         String text=Message.getText();

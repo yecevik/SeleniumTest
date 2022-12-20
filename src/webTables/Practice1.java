@@ -29,7 +29,9 @@ public class Practice1 {
 
             var text= coll.get(i).getText();
             //System.out.println(text);
-if(text.startsWith("$9")){
+            String s=text.replaceAll("\\D+","");
+            double dbl=Double.parseDouble(s);
+if(dbl>90000.0){
     //System.out.println(text);
     WebElement name = driver.findElement(By.xpath("//div[@class='socrata-table frozen-columns']/table/tbody/tr["+(i+1)+"]/td[5]"));
     WebElement lastname = driver.findElement(By.xpath("//div[@class='socrata-table frozen-columns']/table/tbody/tr["+(i+1)+"]/td[4]"));

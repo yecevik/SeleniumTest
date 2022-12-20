@@ -48,9 +48,11 @@ prop.load(fis);
         for (int i = 0; i<secondColumn.size(); i++ ){
 
             String  columnData=secondColumn.get(i).getText();
-            if(columnData.equalsIgnoreCase("42093A")){
+            if(columnData.equalsIgnoreCase("45160A")){
                 WebElement checkBox = driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr["+(i+1)+"]/td[1]"));
                 checkBox.click();
+
+
             }
         }
 
